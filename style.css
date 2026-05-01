@@ -284,6 +284,7 @@ p {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    padding-top: 100px;
 }
 
 .page-header::before {
@@ -323,6 +324,7 @@ p {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    padding-top: 100px;
 }
 
 .hero-overlay {
@@ -1147,16 +1149,19 @@ input:focus, textarea:focus {
     }
     .nav-links {
         position: absolute;
-        top: 100%;
-        left: -100%;
+        top: calc(100% + 15px);
+        left: -110%;
         width: 100%;
-        background: #ffffff;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
         flex-direction: column;
         align-items: center;
         padding: 30px 0;
         transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border-bottom: 1px solid var(--border-color);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        border: 1px solid rgba(255, 255, 255, 0.9);
+        box-shadow: 0 15px 35px rgba(15, 23, 42, 0.1);
+        border-radius: 25px;
     }
     .nav-links.active {
         left: 0;
@@ -1197,9 +1202,11 @@ input:focus, textarea:focus {
     }
     
     .page-header {
-        height: 30vh;
-        min-height: 250px;
+        height: auto;
+        min-height: 280px;
         margin-bottom: 30px;
+        padding-top: 120px;
+        padding-bottom: 40px;
     }
     
     .stats-container {
